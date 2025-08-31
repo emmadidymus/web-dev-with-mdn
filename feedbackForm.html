@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Forms challenge</title>
+    <script defer src="index.js"></script>
+    <style>
+        /* ---------- Global Styles ---------- */
+body {
+  background: linear-gradient(to right, #f8f6ff, #f0f8ff);
+  color: #333;
+  font-family: "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+  padding: 2em;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+h1, h2 {
+  color: #5a2a82;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.8em;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5em;
+  border-left: 5px solid #5a2a82;
+  padding-left: 10px;
+}
+
+p {
+  margin: 0.8em 0;
+  color: #555;
+}
+
+a {
+  color: #5a2a82;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Form Structure ---------- */
+form {
+  background: #fff;
+  padding: 2em;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+fieldset {
+  border: none;
+  margin: 1.5em 0;
+  padding: 0;
+}
+
+legend {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #444;
+  margin-bottom: 0.5em;
+}
+
+/* ---------- Inputs, Select & Textarea ---------- */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 6px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #fafafa;
+  font-size: 1em;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border: 1px solid #5a2a82;
+  box-shadow: 0 0 5px rgba(90, 42, 130, 0.3);
+  outline: none;
+  background: #fff;
+}
+
+textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+/* ---------- Radio & Checkboxes ---------- */
+input[type="radio"],
+input[type="checkbox"] {
+  accent-color: #5a2a82;
+  transform: scale(1.2);
+  margin-right: 8px;
+}
+
+label {
+  margin-right: 20px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* ---------- Button ---------- */
+button {
+  display: block;
+  margin: 2em auto 0;
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  background: linear-gradient(to right, #7a3ea1, #5a2a82);
+  border: none;
+  border-radius: 30px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background: linear-gradient(to right, #5a2a82, #7a3ea1);
+  transform: scale(1.05);
+}
+
+/* ---------- Image ---------- */
+img {
+  display: block;
+  margin: 20px auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+    </style>
+  </head>
+  <body>
+    <form>
+    <h1>We want your feedback!</h1>
+
+    <p>We're very excited that you visited the <a href="#">little house in the woods</a> ,
+    and we want to hear what you thought of it! Please fill in the below
+    sections. You don't need to provide your name or contact details, but
+    if you do, we'll enter you into a <a href="#">prize draw</a> where you'll have a chance
+    to win prizes.</p>
+    <img src="https://mdn.github.io/shared-assets/images/examples/learn/woodland-strip.jpg" alt="">
+
+    <p><fieldset>
+    <legend><h2>Facilities</h2></legend>
+
+    <p>Was the porridge</p>
+    <input type="radio" name="porridge" id="hot">
+    <label for="hot">Too hot?</label>
+    
+    <input type="radio" name="porridge" id="cold">
+    <label for="cold">Too cold?</label>
+
+    <input type="radio" name="porridge" id="right" checked>
+    <label for="right">Just right?</label>
+
+    <p>Were the bed</p>
+    <input type="radio" name="bed" id="hard">
+    <label for="hard">Too hard?</label>
+
+    <input type="radio" name="bed" id="soft">
+    <label for="soft">Too soft?</label>
+
+    <input type="radio" name="bed" id="right" checked>
+    <label for="right">Just right?</label>
+
+    <p>Describe the chairs (select all you agree with)</p>
+    <input type="checkbox" name="comfy" id="comfy">
+    <label for="comfy">Comfy</label>
+
+    <input type="checkbox" name="Luxurious" id="Luxurious">
+    <label for="Luxurious"> Luxurious</label>
+
+    <input type="checkbox" name="hitec" id="hitec">
+    <label for="hitec"> Hi tec</label>
+
+    <input type="checkbox" name="Pretty" id="Pretty">
+    <label for="Pretty">Pretty</label>
+
+    <input type="checkbox" name="Majestic" id="Majestic">
+    <label for="Majestic"> Majestic</label>
+    </fieldset></p>
+
+    
+    <legend><h2>About your hosts</h2></legend>
+    <p> <label for="favorite">Who is your favorite host?</label>
+    <select name="favorite" id="favorite">
+    <option value="Papa bear">Papa bear</option>
+    <option value="Mama bear">Mama bear</option>
+    <option value="Junior">Junior</option>
+    <option value="Dozer">Dozer</option>
+    </select></p>
+   
+    
+    <p><label for="greeting">Which greeting did you prefer?</label>
+    <select name="greeting" id="greeting">
+    <option value="Wave">Wave</option>
+    <option value="Friendly greeting">Friendly greeting</option>
+    <option value="Growl">Growl</option>
+    <option value="Claw marks in the door">Claw marks in the door</option>
+    </select></p>
+
+
+
+   <p><fieldset>
+        <legend><h2>Any other feedback?</h2></legend>
+        <textarea rows="5" cols="30" id=" Give us your comments" name="feedback"></textarea>
+    </fieldset></p> 
+
+    <p><h2>Your details</h2></p>
+
+    <p><label for="name">Name</label>
+    <input type="text" name="name" id="name"></p
+
+    <p><label for="">Email</label>
+    <input type="email" name="email" id="email"></p>
+
+    <p><label for="Phone">Phone</label>
+    <input type="tel" name="Phone" id="Phone"><br></p>
+
+    <p><button type="submit">Submit</button></p>
+    </form>
+  </body>
+</html>
