@@ -1,0 +1,147 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Body */
+body {
+    background-color: #fff8f0; /* soft cream background */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #ffedd5; /* warm apricot */
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #f4c29d;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #d97706; /* deep orange */
+    margin-bottom: 10px;
+}
+
+#navigation nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+#navigation nav ul li a {
+    text-decoration: none;
+    color: #d97706;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#navigation nav ul li a:hover {
+    background-color: #f4c29d;
+    border-radius: 5px;
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Section Titles */
+h2 {
+    color: #b45309; /* slightly darker orange */
+    margin-bottom: 15px;
+    font-size: 2rem;
+    text-align: center;
+}
+
+/* Recipe Articles */
+article {
+    background-color: #fff4e6;
+    border: 1px solid #f4c29d;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+article:hover {
+    transform: scale(1.02);
+}
+
+article h3 {
+    color: #b45309;
+    margin-bottom: 10px;
+}
+
+article h4 {
+    color: #ea580c; /* brighter orange */
+    margin: 10px 0 5px 0;
+}
+
+article p {
+    margin-bottom: 10px;
+}
+
+article ul, article ol {
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+/* Recipe Images */
+article img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0;
+    border-radius: 10px;
+}
+
+/* Cooking Tips Section */
+#tips ul {
+    list-style: disc inside;
+    padding-left: 0;
+}
+
+#tips li {
+    margin-bottom: 8px;
+}
+
+/* Footer */
+footer {
+    background-color: #ffedd5;
+    text-align: center;
+    padding: 15px;
+    border-top: 2px solid #f4c29d;
+    margin-top: 30px;
+    color: #d97706;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #navigation nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    article {
+        padding: 10px;
+    }
+}
